@@ -1,6 +1,7 @@
 let playerScore = 0;
 let computerScore = 0;
 
+
 function getComputerChoice() {
     let choice = ['Rock', 'Paper', 'Scissors'];
     return choice[Math.floor(Math.random() * 3)];
@@ -37,12 +38,15 @@ function playRound(playerSelection, computerSelection) {
     }
     else
         return "Alas! It is a draw!";
-  }
-  
-  const playerSelection = 'rock'; //prompt("Rock, Paper or Scissors?");
-  const computerSelection = getComputerChoice();
+}
 
-  console.log(playRound(playerSelection, computerSelection));
-  console.log(`Player Score: ${playerScore}`);
-  console.log(`Computer Score: ${computerScore}`);
+
+for (let i = 1; i <= 5; i++) {
+    const playerSelection = prompt(`Rock, Paper or Scissors? (Round ${i})`);
+    const computerSelection = getComputerChoice();
+    console.log(`Round ${i}:`);
+    console.log(playRound(playerSelection, computerSelection));
+    console.log(`Player Score: ${playerScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+}
   
