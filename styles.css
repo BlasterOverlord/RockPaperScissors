@@ -1,6 +1,5 @@
 body {
     text-align: center;
-    margin: 50px 10px;
 }
 
 button {
@@ -21,4 +20,17 @@ button:hover {
 #result {
     font-size: 32px;
     margin: 16px 0px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#hand {
+    display: flex;
+    justify-content: space-around;
 }

@@ -41,6 +41,9 @@ function playRound(playerSelection, computerSelection) {
 let playerSelection;
 let computerSelection;
 const btn = document.querySelector(".btns");
+let res = document.querySelector("#result");
+let pScore = document.querySelector("#pScore");
+let cScore = document.querySelector("#cScore");
 
 btn.addEventListener("click", (event) => {
 
@@ -58,8 +61,9 @@ btn.addEventListener("click", (event) => {
             computerSelection = getComputerChoice();
     }
     let result = playRound(playerSelection, computerSelection);
-
-    let res = document.querySelector("#result");
     res.textContent = result;
+
+    pScore.innerHTML = "Player Score: " + playerScore;
+    cScore.innerHTML = "Computer Score: " + computerScore;
 })
   
