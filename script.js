@@ -41,12 +41,10 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-for (let i = 1; i <= 5; i++) {
-    const playerSelection = prompt(`Rock, Paper or Scissors? (Round ${i})`);
-    const computerSelection = getComputerChoice();
-    console.log(`Round ${i}:`);
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(`Player Score: ${playerScore}`);
-    console.log(`Computer Score: ${computerScore}`);
-}
+// const playerSelection = prompt(`Rock, Paper or Scissors? (Round ${i})`);
+// const computerSelection = getComputerChoice();
+// console.log(`Round ${i}:`);
+// console.log(playRound(playerSelection, computerSelection));
+// console.log(`Player Score: ${playerScore}`);
+// console.log(`Computer Score: ${computerScore}`);
   
