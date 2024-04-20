@@ -40,10 +40,13 @@ function playRound(playerSelection, computerSelection) {
 
 let playerSelection;
 let computerSelection;
+
 const btn = document.querySelector(".btns");
 let res = document.querySelector("#result");
 let pScore = document.querySelector("#pScore");
 let cScore = document.querySelector("#cScore");
+let pHand = document.querySelector("#playerImg");
+let cHand = document.querySelector("#compImg");
 
 btn.addEventListener("click", (event) => {
 
@@ -56,13 +59,22 @@ btn.addEventListener("click", (event) => {
         case 'paper':
             playerSelection = 'Paper';
             computerSelection = getComputerChoice();
+            break;
         case 'scissors':
             playerSelection = 'Scissors';
             computerSelection = getComputerChoice();
+            break;
     }
+
+    //show the hands (images)
+    pHand.src = 'images/' + playerSelection + '.png';
+    cHand.src = 'images/' + computerSelection + '.png';
+
+    // inititate the round
     let result = playRound(playerSelection, computerSelection);
     res.textContent = result;
 
+    // update the scores
     pScore.innerHTML = "Player Score: " + playerScore;
     cScore.innerHTML = "Computer Score: " + computerScore;
 })

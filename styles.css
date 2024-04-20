@@ -1,5 +1,11 @@
 body {
-    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 button {
@@ -8,8 +14,8 @@ button {
     padding: 8px 32px;
     border: 2px solid #2aca6d;
     border-radius: 5px;
-    margin: 10px;
     font-size: 16px;
+    margin: 0px 10px;
 }
 
 button:hover {
@@ -19,7 +25,6 @@ button:hover {
 
 #result {
     font-size: 32px;
-    margin: 16px 0px;
 }
 
 footer {
@@ -27,10 +32,27 @@ footer {
     justify-content: space-around;
     position: fixed;
     bottom: 0;
+    padding: 4px 8px;
     width: 100%;
 }
 
 #hand {
     display: flex;
     justify-content: space-around;
+    width: 100%;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+    align-self: stretch;
 }
