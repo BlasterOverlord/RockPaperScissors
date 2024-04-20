@@ -17,3 +17,8 @@ button:hover {
     background-color: #2aca6d;
     color: white;
 }
+
+#result {
+    font-size: 32px;
+    margin: 16px 0px;
+}

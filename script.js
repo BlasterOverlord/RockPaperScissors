@@ -9,42 +9,57 @@ function getComputerChoice() {
 
 
 function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
-    computerSelection = computerSelection.toLowerCase();
 
-    if (playerSelection == 'rock' && computerSelection == 'paper') {
+    if (playerSelection == 'Rock' && computerSelection == 'Paper') {
         computerScore++;
         return 'You Lose! Paper beats Rock!';
     }
-    else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+    else if (playerSelection == 'Rock' && computerSelection == 'Scissors') {
         playerScore++;
         return 'You Win! Rock beats Scissors!';
     }
-    else if (playerSelection == 'paper' && computerSelection == 'rock') {
+    else if (playerSelection == 'Paper' && computerSelection == 'Rock') {
         playerScore++;
         return 'You Win! Paper beats Rock';
     }
-    else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+    else if (playerSelection == 'Paper' && computerSelection == 'Scissors') {
         computerScore++;
         return 'You Lose! Scissors beat Paper!';
     }
-    else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+    else if (playerSelection == 'Scissors' && computerSelection == 'Rock') {
         computerScore++;
         return 'You Lose! Rock beats Scissors';
     }
-    else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+    else if (playerSelection == 'Scissors' && computerSelection == 'Paper') {
         playerScore++;
         return 'You Win! Scissors beat Paper!';
     }
     else
-        return "Alas! It is a draw!";
+        return "Alas! It is a tie!";
 }
 
+let playerSelection;
+let computerSelection;
+const btn = document.querySelector(".btns");
 
-// const playerSelection = prompt(`Rock, Paper or Scissors? (Round ${i})`);
-// const computerSelection = getComputerChoice();
-// console.log(`Round ${i}:`);
-// console.log(playRound(playerSelection, computerSelection));
-// console.log(`Player Score: ${playerScore}`);
-// console.log(`Computer Score: ${computerScore}`);
+btn.addEventListener("click", (event) => {
+
+    const target = event.target;
+    switch(target.id) {
+        case 'rock':
+            playerSelection = 'Rock';
+            computerSelection = getComputerChoice();
+            break;
+        case 'paper':
+            playerSelection = 'Paper';
+            computerSelection = getComputerChoice();
+        case 'scissors':
+            playerSelection = 'Scissors';
+            computerSelection = getComputerChoice();
+    }
+    let result = playRound(playerSelection, computerSelection);
+
+    let res = document.querySelector("#result");
+    res.textContent = result;
+})
   
